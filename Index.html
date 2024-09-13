@@ -1,56 +1,79 @@
 <!DOCTYPE html>
-<html lang="en"> 
-<script src="ArcadiaReview.js"></script> 
-<head>       
-    <link rel="stylesheet" href="Arcadia.css">
-    <title>
-        Arcadia
-    </title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcadia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Arcadia</div>
+        <ul class="nav-links">
+            <li><a href="#" onclick="switchSection('home')">Home</a></li>
+            <li><a href="#" onclick="switchSection('stories')">Stories</a></li>
+            <li><a href="#" onclick="switchSection('create')">Create</a></li>
+            <li><a href="#" onclick="switchSection('about')">About</a></li>
+        </ul>
+        <button class="login-btn" onclick="openModal()">Account</button>
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
 
-<body class="background-change">
-    <header>
-        <nav>
-            <h1>
-                <a href="Index.html">Arcadia</a>
-            </h1>
-            <a href="Trending.html">Trending</a>
-            <a href="All-Prompts.html">All prompts</a>
-            <a href="About-me.html">About us</a>
-        </nav>
-    </header>
-    <main>
-        <div class="story">
-            <h2>Hero, You took everything from me</h2>
-            <p>Alone the "monster" sat upon his throne. his "cell" as he more aptly called it. His eyes were closed as he idly ran his clawed finger along the edge of the long empty chalice resting on the arm of said "throne". he could see them running through the halls of his hidden castle. eons past he sent his minions away, his powerful followers scattered or killed by his own hand. He had long lost the ambition for conquest and glory. Now he was but a simple hermit in self-imposed exile to live out his existence till the end of all things.</p>
+    </nav>
 
-            <p>His eyes lazily opened when the sound of his throne room's doors was smashed open and the appointed "heroes" spilled into the room like a stain on the carpet in his eyes. "so...you're finally here...like vaulters picking at the scraps of a long dead corpse you have come."</p>
-
-            <p>The leader of the group steps forward and points his holy blade at the "monster".  "We have come to ensure your evil never rises! We know of how your works of old have made it into the hands of dark lords of the past! We have searched far and found the last of your 'hidden' followers and slew them for the evil monsters they are! All that is left is the master himself!"</p>
-
-            <p>Most of the battle-hungry group cheered in chorus to their leader's speech. the monster sighed and flicked his finger against the chalice to send it skidding across the room. It came to a stop at the feet of the leader. He watched with annoyed amusement as the group jumped back and prepared their weapons for a sudden surprise attack, but nothing happened. "Go on dogs...take it. Be good little pups and return it back to your masters. It's what they wanted, correct? Mementos of all of my disbanded court?"</p>
-
-            <p>The hero's stood in confusion as the monster stood and stood with his arms held behind his back as he looked at them with a bored expression. His eyes landed on a certain raven-haired beauty and he looked at her with sorrow in his eyes. "I see they even convinced her descendent to follow in this fool quest. Tell me what promises they made to you? Fame? Fortune?! Past crimes expunged from record? You are all fools."</p>
-
-            <p>The monster slowly strode down the few steps leading to his throne towards the heroes as several were starting to doubt and question the "cause" they were following.</p>
-
-            <p>"I know not the lies and dark whispers your masters have told you, nor do I honestly care. All I wanted was to be left alone, to be forgotten like ashes in the wind of a disaster's past. I broke my council with my own hands and slew those that would not leave as commanded. I desired to be lost in the annals of history and not even be a footnote in the most ancient of tombs! The sole thing I came to cherish and care for more than my warlording and bloodshed was stolen from me! Twisted by lies and poisoned honey words by the very masters that now hold your leash! They even dare use her descendent against me to force my hand!"</p>
-
-            <p>The monster raised his hand and curled it into a fist as the castle started to tremble and the air became thick with the power at his command. Several fell to their knees as they looked on in fear at being shown a mere glimpse of the power at his command despite all the time he had remained dormant.</p>
-
-            <p>"I WANTED NOTHING FROM THIS WORLD AFTER SHE WAS TAKEN FROM ME! THEY HAD WON AND BROKE MY SPIRIT AND WILL TO CONTINUE ON MY CAMPAIGN AGAINST THEM! BUT I SHOULD HAVE KNOWN! SHOULD HAVE KNOWN THAT THOSE INSATIABLE BEASTS WOULD NEVER ESCAPE THEIR GLUTTONOUS HUNGER FOR POWER! SO THEY SEND DESPERATE SOULS TO ME IN AN ATTEMPT TO KILL ME!"</p>
-
-            <p>The only one of the group not on their knees was the raven-haired descendent. she only stared in horror as it felt like memories not belonging to her filled her mind and a part of her that was sealed away was broken free in the presence of this world-ending power. Tears ran down her face as she looked at the rage-filled visage of the monster.</p>
-
-            <p>"IF IT IS A MONSTER AND DEVIL THIS WORLD DESIRES THEN BY WHATEVER GOD YOU FUCKING PRAY TO I WILL GIVE IT TO YOU!"</p>
-            
-            <p>-Joshua Charney</p>
+    <!-- Sections -->
+    <section id="home" class="section active">
+        <h1>Welcome to Arcadia</h1>
+        <p>Publish your amazing stories and share them with the world.</p>
+        <button class="cta-btn" onclick="switchSection('create')">Start Writing</button>
+        <div class="story-container">
+            <img src="LEO.jpg" alt="Story Image" class="story-image">
+            <div class="story-info">
+                <h2 class="story-title">Story Title</h2>
+                <p class="story-author">by Author Name</p>
+                <p class="story-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac nisi eget arcu hendrerit consectetur. Aliquam erat volutpat.</p>
+            </div>
         </div>
+        <!-- Repeat .story-container as needed -->
+    </section>
 
-        <div class="story">
-            <h2>Story Title 2</h2>
-            <p>Another short story content.</p>
+    <section id="create" class="section">
+        <h1>Create a Story</h1>
+        <textarea placeholder="Write your story here..."></textarea>
+        <button class="publish-btn">Publish</button>
+    </section>
+
+    <section id="about" class="section">
+        <h1>About Arcadia</h1>
+        <p>A platform for passionate writers and readers.</p>
+    </section>
+
+    <!-- Login/Signup Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="loginSection">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <input type="text" placeholder="Username" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                    <p>Don't have an account? <a href="#" onclick="showSignup()">Sign Up</a></p>
+                </form>
+            </div>
+            <div id="signupSection" style="display: none;">
+                <h2>Sign Up</h2>
+                <form id="signupForm">
+                    <input type="text" placeholder="Username" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Sign Up</button>
+                    <p>Already have an account? <a href="#" onclick="showLogin()">Log In</a></p>
+                </form>
+            </div>
         </div>
-    </main>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

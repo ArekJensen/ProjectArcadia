@@ -1,0 +1,409 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1, h2 {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center; /* Center the navbar items */
+    align-items: center;
+    background-color: #1e1e2f;
+    color: #fff;
+    padding: 15px 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff4d4d;
+    margin-right: auto; /* Move the logo to the left */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff4d4d;
+}
+
+.nav-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff4d4d;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Align login and dark mode button */
+.navbar .login-btn,
+.navbar .dark-mode-toggle {
+    margin: 0 10px; /* Adjust margin to bring them closer */
+}
+
+/* Call to Action button */
+.cta-btn {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #ff1a1a;
+}
+
+/* Sections */
+.section {
+    display: none;
+    padding: 80px 50px;
+    min-height: 80vh;
+}
+
+.section.active {
+    display: block;
+}
+
+textarea {
+    width: 100%;
+    height: 250px;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #ff4d4d;
+}
+
+.publish-btn {
+    padding: 12px 25px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.publish-btn:hover {
+    background-color: #ff1a1a;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 80%;
+    position: relative;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    animation: modalPop 0.3s ease;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content input {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.modal-content input:focus {
+    border-color: #ff4d4d;
+}
+
+button[type="submit"] {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff1a1a;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close:hover {
+    color: #ff4d4d;
+}
+
+@keyframes modalPop {
+    0% {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.login-btn {
+    background: linear-gradient(135deg, #ff4d4d, #ff7575);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background: linear-gradient(135deg, #ff7575, #ff4d4d);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+/* Modal Form Submit Button (Updated) */
+button[type="submit"] {
+    background: linear-gradient(135deg, #ff4d4d, #ff7575);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(135deg, #ff7575, #ff4d4d);
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #ff4d4d;
+}
+
+.story-container {
+    display: flex;
+    align-items: center;
+    margin: 20px 0; /* Adds margin to move the containers down */
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.story-container:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.story-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.story-content {
+    max-width: calc(100% - 140px);
+}
+
+.story-title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.story-text {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.story-author {
+    font-size: 14px;
+    color: #999;
+}
+
+/* Dark mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.navbar.dark-mode {
+    background-color: #1e1e1e;
+}
+
+.navbar.dark-mode .logo {
+    color: #ff4d4d;
+}
+
+.nav-links.dark-mode a {
+    color: #e0e0e0;
+}
+
+.nav-links.dark-mode a:hover {
+    color: #ff4d4d;
+}
+
+.cta-btn.dark-mode,
+.publish-btn.dark-mode,
+.login-btn.dark-mode,
+button[type="submit"].dark-mode {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.cta-btn.dark-mode:hover,
+.publish-btn.dark-mode:hover,
+.login-btn.dark-mode:hover,
+button[type="submit"].dark-mode:hover {
+    background-color: #ff1a1a;
+}
+
+.modal-content.dark-mode {
+    background-color: #1e1e1e;
+}
+
+.modal-content.dark-mode input {
+    border-color: #333;
+}
+
+.modal-content.dark-mode input:focus {
+    border-color: #ff4d4d;
+}
+
+.story-container.dark-mode {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.story-container.dark-mode:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.story-title.dark-mode,
+.story-text.dark-mode,
+.story-author.dark-mode {
+    color: #e0e0e0;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 10px; /* Adjust space between buttons */
+}
+
+.dark-mode-toggle:hover {
+    background-color: #ff1a1a;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode-toggle:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 77, 77, 0.3);
+}
