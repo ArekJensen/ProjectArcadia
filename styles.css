@@ -36,6 +36,11 @@ h1, h2 {
     color: #ff4d4d;
     margin-right: auto; /* Move the logo to the left */
 }
+.navbar .navbar-logo {
+    width: 40px;  /* Adjust the size of the logo */
+    height: 40px; /* Adjust the size of the logo */
+    margin-right: 10px; /* Adds some space between the logo and the text */
+}
 
 .nav-links {
     list-style: none;
@@ -433,3 +438,43 @@ button[type="submit"].dark-mode:hover {
 .generate-prompt-btn:hover, .publish-btn:hover {
     background-color: #ff4d4d;
 }
+
+/* Y u no work???, plz work */
+
+/*Fotter style*/
+/* Footer social icons styling */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #1e1e2f;
+    color: #fff;
+    font-size: 14px;
+}
+
+footer .social-icons {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px; 
+}
+
+footer .social-icons a {
+    color: #333; 
+    font-size: 24px; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #ff4d4d; 
+}
+
+footer .social-icons i {
+    transition: transform 0.3s ease;
+}
+
+footer .social-icons a:hover i {
+    transform: scale(1.2);
+}
+

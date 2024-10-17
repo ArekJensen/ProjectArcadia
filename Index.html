@@ -14,7 +14,10 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="logo">Arcadia</div>
+        <div class="logo">
+            <img src="Logos/ArcadiaLogo.png" class="navbar-logo">
+            Arcadia
+        </div>
         <ul class="nav-links">
             <li><a href="#" onclick="switchSection('home')">Home</a></li>
             <li><a href="#" onclick="switchSection('stories')">Stories</a></li>
@@ -68,13 +71,14 @@
     <script>
         // Your Firebase configuration
         const firebaseConfig = {
-            apiKey: "YOUR_API_KEY",
-            authDomain: "YOUR_AUTH_DOMAIN",
-            projectId: "YOUR_PROJECT_ID",
-            storageBucket: "YOUR_STORAGE_BUCKET",
-            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-            appId: "YOUR_APP_ID"
-         };
+            apiKey: "AIzaSyAf94YGDcSTKQlm0BZmCnE7RAYbbg9FVq8",
+            authDomain: "arcadia-b112f.firebaseapp.com",
+            databaseURL: "https://arcadia-b112f-default-rtdb.firebaseio.com",
+            projectId: "arcadia-b112f",
+            storageBucket: "arcadia-b112f.appspot.com",
+            messagingSenderId: "191699467760",
+            appId: "1:191699467760:web:318a94ea169994439df135"
+        };
       
         // Initialize Firebase
         const app = firebase.initializeApp(firebaseConfig);
@@ -82,5 +86,17 @@
       </script>
 
     <script src="script.js"></script>
+
+    <footer>
+        <p>&copy; 2024 Arcadia</p>
+        <p>Where every story finds its voice.</p>
+        
+        <div class="social-icons">
+            <a href="https://github.com/ArekJensen" target="_blank"><i class="fab fa-github-square"></i></a>
+            <a href="https://www.instagram.com/arekjobs/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <button></button>
+    </footer>
+
 </body>
 </html>
