@@ -1,7 +1,7 @@
 import openai
 
 # Sätt din API-nyckel här
-openai.api_key = '7bde324de41a6d16'
+openai.api_key = 'API_KEY'
 
 # Exempel på en fråga till GPT-modellen
 response = openai.Completion.create(
